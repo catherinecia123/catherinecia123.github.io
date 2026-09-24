@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catherine Cianflone | Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #d32f2f;
+      --text-dark: #1a1a1a;
+      --text-muted: #555555;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
+
+    /* Header Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .brand span {
+      color: var(--primary-color);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    nav a.btn-linkedin {
+      background: #0a66c2;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 900px;
+      margin: 60px auto 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .badge {
+      background-color: #fee2e2;
+      color: #991b1b;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-blurb {
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      max-width: 800px;
+      margin-bottom: 25px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .profile-info {
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    .profile-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-info p {
+      color: #777;
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      color: var(--text-dark);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      max-width: 800px;
+      margin: 30px auto 60px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .skills-section h2 {
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill-tag {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    /* Projects Section */
+    .projects-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .cert-container {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .cert-img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid var(--border-color);
+      color: #888;
+      font-size: 0.85rem;
+      background: #ffffff;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="brand">RBS <span>Catherine's Portfolio</span></div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="https://www.linkedin.com/in/catherine-cianflone-5b7373383/" target="_blank" class="btn-linkedin">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge">Rutgers Business School • Marketing</div>
+    
+    <!-- One-Sentence Personal Statement -->
+    <p class="hero-blurb">
+      My name is Catherine Cianflone, a Rutgers Business School Marketing sophomore and Delta Gamma member pursuing opportunities in brand growth and community engagement.
+    </p>
+
+    <div class="profile-info">
+      <h3>Catherine Cianflone</h3>
+      <p>Rutgers Business School</p>
+    </div>
+
+    <!-- LinkedIn Link -->
+    <div class="actions">
+      <a href="https://www.linkedin.com/in/catherine-cianflone-5b7373383/" target="_blank" class="btn">LinkedIn Profile &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <span class="skill-tag">Communication</span>
+      <span class="skill-tag">Leadership</span>
+      <span class="skill-tag">Hard Working</span>
+      <span class="skill-tag">Kindness</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Projects</h2>
+    
+    <div class="projects-grid">
+      
+      <!-- Management Skills Project -->
+      <div class="project-card">
+        <h3>Management Skills Business Consulting Project</h3>
+        <p>
+          In my Management Skills class, I worked with a real-life company alongside my team where we analyzed company operations and decided what needed to be fixed for it to run more efficiently.
+        </p>
+      </div>
+
+      <!-- LinkedIn Learning Certificate Project -->
+      <div class="project-card">
+        <h3>LinkedIn Learning Certificate of Completion</h3>
+        <p><strong>Excel: Advanced Formatting Techniques</strong></p>
+        <p style="font-size: 0.85rem; color: #777;">Course completed by Catherine Cianflone</p>
+        
+        <div class="cert-container">
+          <!-- Small Certificate Preview -->
+          <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3AtNDAyLW1vb2stMTE2NjEtMDMuanBn.jpg" alt="LinkedIn Learning Certificate - Catherine Cianflone" class="cert-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Catherine Cianflone. Built on GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
